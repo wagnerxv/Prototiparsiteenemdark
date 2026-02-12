@@ -1,121 +1,61 @@
-import { Instagram, Youtube, Facebook, Mail, MapPin } from 'lucide-react';
+import { Instagram, MapPin } from 'lucide-react';
 import { Logo } from './Logo';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-950 border-t border-gray-800 py-12 px-4">
+    <footer className="bg-black border-t border-gray-800 py-8 px-4">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-6">
           {/* Logo and Description */}
-          <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
+          <div>
+            <div className="flex items-center gap-3 mb-3">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-500 rounded-full blur-lg opacity-50" />
                 <div className="relative bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-500 p-[2px] rounded-full">
-                  <div className="bg-gray-950 rounded-full p-2">
-                    <Logo className="w-6 h-6" />
+                  <div className="bg-black rounded-full p-2">
+                    <Logo className="w-5 h-5" />
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="font-bold text-white">up.educacao</h3>
-                <p className="text-xs text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
+                <h3 className="font-bold text-white text-sm">up.educacao</h3>
+                <p className="text-[10px] text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">
                   Org. de Suporte Acadêmico
                 </p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-              Ajudamos você a superar seus desafios acadêmicos com a preparação adequada e o ambiente certo.
+            <p className="text-gray-500 text-xs leading-relaxed">
+              Matérias isoladas do ENEM com flexibilidade total.
             </p>
-            <div className="flex gap-3">
-              <a
-                href="https://www.instagram.com/up.educacao_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-gray-900 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 p-2 rounded-lg transition-all"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-900 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 p-2 rounded-lg transition-all"
-              >
-                <Youtube className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-900 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 p-2 rounded-lg transition-all"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="bg-gray-900 hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 p-2 rounded-lg transition-all"
-              >
-                <Mail className="w-5 h-5 text-white" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-4">Links Rápidos</h4>
+            <h4 className="text-white font-bold mb-3 text-sm">Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Sobre Nós
-                </a>
-              </li>
-              <li>
-                <a href="#materias" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
+                <a href="#materias" className="text-gray-500 hover:text-pink-500 text-xs transition-all">
                   Matérias
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Planos e Preços
+                <a href="#" className="text-gray-500 hover:text-pink-500 text-xs transition-all">
+                  Sobre
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
+                <a href="#" className="text-gray-500 hover:text-pink-500 text-xs transition-all">
                   Contato
                 </a>
               </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Suporte</h4>
-            <ul className="space-y-2">
               <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Central de Ajuda
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Termos de Uso
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Política de Privacidade
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-400 hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-pink-500 hover:to-orange-500 text-sm transition-all">
-                  Reembolso
+                <a 
+                  href="https://linktr.ee/upisoladas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 text-xs font-semibold"
+                >
+                  linktr.ee/upisoladas
                 </a>
               </li>
             </ul>
@@ -123,41 +63,32 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4">Contato</h4>
-            <ul className="space-y-3 text-sm text-gray-400">
+            <h4 className="text-white font-bold mb-3 text-sm">Contato</h4>
+            <ul className="space-y-2 text-xs text-gray-500">
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-pink-500 flex-shrink-0 mt-0.5" />
-                <span>Rua Cícero Torres, 286, Arapiraca 57313-170</span>
+                <MapPin className="w-3 h-3 text-pink-500 flex-shrink-0 mt-0.5" />
+                <span>Rua Cícero Torres, 286, Arapiraca</span>
               </li>
               <li>
-                <span className="block text-white font-semibold mb-1">Email:</span>
-                contato@upeducacao.com.br
-              </li>
-              <li>
-                <span className="block text-white font-semibold mb-1">WhatsApp:</span>
-                (11) 99999-9999
-              </li>
-              <li>
-                <span className="block text-white font-semibold mb-1">Horário:</span>
-                Segunda a Sexta, 8h às 18h
+                <a 
+                  href="https://www.instagram.com/up.educacao_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-pink-500 transition-colors"
+                >
+                  <Instagram className="w-3 h-3" />
+                  @up.educacao_
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm">
+        <div className="pt-6 border-t border-gray-800 text-center">
+          <p className="text-gray-600 text-xs">
             © 2026 UP Educação. Todos os direitos reservados.
           </p>
-          <a 
-            href="https://linktr.ee/upisoladas"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 text-sm font-semibold hover:underline"
-          >
-            linktr.ee/upisoladas
-          </a>
         </div>
       </div>
     </footer>
