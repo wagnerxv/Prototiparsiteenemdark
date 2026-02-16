@@ -2,11 +2,13 @@
 
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export function Hero() {
+  const router = useRouter();
+
   return (
     <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-black min-h-[90vh] flex flex-col items-center justify-center">
-      {/* Spotlight Effect */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-white/10 via-transparent to-transparent blur-[100px] opacity-40 pointer-events-none" />
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-pink-600/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
       
@@ -34,6 +36,7 @@ export function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
           <motion.button 
+            onClick={() => router.push('/checkout')}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="group relative px-8 py-4 bg-white text-black rounded-full font-bold text-lg overflow-hidden"
@@ -45,7 +48,6 @@ export function Hero() {
             <span className="absolute inset-0 z-10 bg-white group-hover:opacity-0 transition-opacity duration-300 flex items-center justify-center gap-2">
               Começar Agora <ArrowRight className="w-5 h-5" />
             </span>
-            {/* O texto acima duplica para criar o efeito de reveal, truque visual comum em sites high-end */}
           </motion.button>
           
           <button className="text-gray-400 hover:text-white transition-colors underline decoration-gray-700 hover:decoration-white underline-offset-4">
@@ -54,7 +56,6 @@ export function Hero() {
         </div>
       </div>
       
-      {/* Grid no chão para dar profundidade 3D */}
       <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-[linear-gradient(to_bottom,transparent,black),linear-gradient(to_right,#333_1px,transparent_1px),linear-gradient(to_bottom,#333_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:linear-gradient(to_top,black,transparent)] opacity-20 transform perspective-[1000px] rotate-x-60" />
     </section>
   );

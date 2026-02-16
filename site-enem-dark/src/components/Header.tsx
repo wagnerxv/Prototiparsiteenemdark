@@ -3,15 +3,17 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Logo } from './Logo';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-gray-800">
       <nav className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <div className="flex items-center gap-3">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-500 rounded-full blur-lg opacity-50" />
@@ -29,17 +31,21 @@ export function Header() {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             <a href="#materias" className="text-gray-300 hover:text-pink-500 transition-colors text-sm">
               Matérias
             </a>
-            <button className="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:shadow-lg hover:shadow-pink-500/50 text-white px-6 py-2 rounded-full transition-all font-bold text-sm">
+            <Link href="/login" className="text-gray-300 hover:text-white transition-colors text-sm font-medium">
+              Entrar
+            </Link>
+            <button 
+              onClick={() => router.push('/checkout')}
+              className="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 hover:shadow-lg hover:shadow-pink-500/50 text-white px-6 py-2 rounded-full transition-all font-bold text-sm"
+            >
               Quero Começar
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -48,13 +54,21 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 flex flex-col gap-3">
             <a href="#materias" className="text-gray-300 text-sm">
               Matérias
             </a>
-            <button className="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 text-white px-6 py-2 rounded-full font-bold text-sm">
+            <Link href="/dashboard" className="text-gray-300 text-sm">
+              Entrar
+            </Link>
+            <button 
+              onClick={() => {
+                setIsMenuOpen(false);
+                router.push('/checkout');
+              }}
+              className="bg-gradient-to-r from-pink-500 via-orange-500 to-yellow-500 text-white px-6 py-2 rounded-full font-bold text-sm"
+            >
               Quero Começar
             </button>
           </div>
