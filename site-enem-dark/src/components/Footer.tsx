@@ -3,7 +3,7 @@ import { Logo } from './Logo';
 
 export function Footer() {
   return (
-    <footer className="bg-black border-t border-gray-800 py-8 px-4">
+    <footer className="bg-transparent border-t border-gray-800/50 py-8 px-4 relative z-10">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-6">
           {/* Logo and Description */}
@@ -12,7 +12,7 @@ export function Footer() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-500 rounded-full blur-lg opacity-50" />
                 <div className="relative bg-gradient-to-br from-pink-500 via-orange-500 to-yellow-500 p-[2px] rounded-full">
-                  <div className="bg-black rounded-full p-2">
+                  <div className="bg-black/80 rounded-full p-2">
                     <Logo className="w-5 h-5" />
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 border-t border-gray-800 text-center">
+        <div className="pt-6 border-t border-gray-800/50 text-center">
           <p className="text-gray-600 text-xs">
             © 2026 UP Educação. Todos os direitos reservados.
           </p>

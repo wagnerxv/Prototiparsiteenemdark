@@ -8,7 +8,7 @@ export function Hero() {
   const router = useRouter();
 
   return (
-    <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-black min-h-[90vh] flex flex-col items-center justify-center">
+    <section className="relative pt-32 pb-20 px-4 overflow-hidden bg-transparent min-h-[90vh] flex flex-col items-center justify-center">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-white/10 via-transparent to-transparent blur-[100px] opacity-40 pointer-events-none" />
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-pink-600/20 blur-[120px] rounded-full mix-blend-screen pointer-events-none" />
       

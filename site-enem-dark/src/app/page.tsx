@@ -10,7 +10,7 @@ import { GridBackground } from '@/components/ui/grid-background';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black overflow-x-hidden selection:bg-pink-500/30 selection:text-white">
+    <main className="min-h-screen bg-transparent overflow-x-hidden selection:bg-pink-500/30 selection:text-white">
       {/* Fundo Global */}
       <GridBackground />
       

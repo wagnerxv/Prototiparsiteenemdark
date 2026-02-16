@@ -35,7 +35,7 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-gray-950">
+    <section className="py-24 px-4 bg-transparent">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                 <div className="p-1">
-                  <Card className="bg-gray-900 border-gray-800">
+                  <Card className="bg-gray-900/60 backdrop-blur-sm border-gray-800">
                     <CardContent className="flex flex-col gap-4 p-6">
                       <div className="flex gap-1">
                         {[1, 2, 3, 4, 5].map((star) => (
@@ -85,8 +85,8 @@ export function Testimonials() {
             ))}
           </CarouselContent>
           <div className="hidden md:block">
-            <CarouselPrevious className="border-gray-700 bg-black text-white hover:bg-gray-800" />
-            <CarouselNext className="border-gray-700 bg-black text-white hover:bg-gray-800" />
+            <CarouselPrevious className="border-gray-700 bg-black/50 backdrop-blur-md text-white hover:bg-gray-800" />
+            <CarouselNext className="border-gray-700 bg-black/50 backdrop-blur-md text-white hover:bg-gray-800" />
           </div>
         </Carousel>
       </div>

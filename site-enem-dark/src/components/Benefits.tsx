@@ -12,7 +12,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section className="py-24 px-4 bg-gray-950 relative overflow-hidden">
+    <section className="py-24 px-4 bg-transparent relative overflow-hidden">
       {/* Background effects suavizados */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-pink-500/5 rounded-full blur-[120px]" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-[120px]" />
@@ -61,7 +61,7 @@ export function Benefits() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto bg-gradient-to-b from-gray-900 to-black border border-gray-800 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
+          className="max-w-4xl mx-auto bg-gradient-to-b from-gray-900/80 to-black/80 backdrop-blur-md border border-gray-800 rounded-3xl p-8 md:p-12 text-center relative overflow-hidden"
         >
           {/* Brilho decorativo na borda superior */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-pink-500/50 to-transparent" />
