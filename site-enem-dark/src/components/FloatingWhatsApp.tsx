@@ -56,7 +56,9 @@ export function FloatingWhatsApp() {
 
   const handleOptionClick = (option: string) => {
     const userMsg: Message = { id: Date.now().toString(), text: option, sender: "user" };
-    setMessages((prev) => prev.map(m => ({ ...m, options: [] })).concat(userMsg));
+    setMessages((prev) => 
+      prev.map((m): Message => ({ ...m, options: [] })).concat(userMsg)
+    );
     setIsTyping(true);
 
     setTimeout(() => {
